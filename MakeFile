@@ -1,0 +1,23 @@
+# Makefile for compiling shell2.c
+
+# Compiler
+CC = gcc
+
+# Compiler flags
+CFLAGS = -Wall -g
+
+# Target executable name
+TARGET = myshell
+
+# Source files
+SRC = shell2.c , shell2.h ,shell3.c ,shell3.h
+
+# Rule to make the target
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+
+# Clean rule
+clean:
+	rm -f $(TARGET)
+
+.PHONY: clean
